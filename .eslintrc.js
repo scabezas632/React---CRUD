@@ -22,7 +22,7 @@ module.exports = {
   },
   rules: {
     'linebreak-style': 'off', // Don't play nicely with Windows.
-
+    'operator-linebreak': 'off',
     'arrow-parens': 'off', // Incompatible with prettier
     'object-curly-newline': 'off', // Incompatible with prettier
     'no-mixed-operators': 'off', // Incompatible with prettier
@@ -30,8 +30,12 @@ module.exports = {
     'function-paren-newline': 'off', // Incompatible with prettier
     'no-plusplus': 'off',
     'space-before-function-paren': 0, // Incompatible with prettier
+    'no-underscore-dangle': 'off', // Incompatible with Redux Devtools Extension
+    'import/prefer-default-export': 'off', // Incompatible
 
-    'max-len': ['error', 100, 2, { ignoreUrls: true }], // airbnb is allowing some edge cases
+    'max-len': ['error', 100, 2, {
+      ignoreUrls: true
+    }], // airbnb is allowing some edge cases
     'no-console': 'error', // airbnb is using warn
     'no-alert': 'error', // airbnb is using warn
 
@@ -40,7 +44,9 @@ module.exports = {
 
     'react/require-default-props': 'off', // airbnb use error
     'react/forbid-prop-types': 'off', // airbnb use error
-    'react/jsx-filename-extension': ['error', { extensions: ['.js'] }], // airbnb is using .jsx
+    'react/jsx-filename-extension': ['error', {
+      extensions: ['.js']
+    }], // airbnb is using .jsx
 
     'prefer-destructuring': 'off',
 
@@ -51,7 +57,10 @@ module.exports = {
 
     'jsx-a11y/anchor-is-valid': [
       'error',
-      { components: ['Link'], specialLink: ['to'] },
+      {
+        components: ['Link'],
+        specialLink: ['to']
+      },
     ],
     'jsx-a11y/label-has-for': [
       2,
